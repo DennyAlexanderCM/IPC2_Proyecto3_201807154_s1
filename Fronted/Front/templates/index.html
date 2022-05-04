@@ -1,0 +1,98 @@
+<!-- IMPORTANTE PARA LA CARGA DE ARCHIVOS ESTATICOS -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Goggle Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <title>My app</title>
+</head>
+
+<body>
+    <button class="btn-flotante" onclick="reset()">Reset</button>
+    <nav class="navbar flex">
+        <div class="nav-logo flex">
+            <h1>Tecnologías Chapinas</h1>
+        </div>
+        <ul class="nav-menu flex">
+            <li class="nav-item"><button type="button" class="btn_ini" onclick="showDiv2()">Cargar
+                    Archivo</button></li>
+            <li class="nav-item dropdown">
+                <button type="button" class="btn_ini dropbtn">Peticiones</button>
+                <div class="dropdown-content">
+                    <button class="btn-2" onclick="showDiv4()">Consultar Datos</button>
+                    <button class="btn-2">Resumen (Fecha)</button>
+                    <button class="btn-2">Resumen (Rango F.)</button>
+                    <button class="btn-2">Reporte PDF</button>
+                    <button class="btn-2" onclick="showDiv5()">Prueba Mensaje</button>
+
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <button type="button" class="btn_ini dropbtn">Ayuda</button>
+                <div class="dropdown-content">
+                    <button onclick="showDiv3()" class="btn-2">Créditos</button>
+                    <button class="btn-2">Documentación</button>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        
+        <div class="container flex">
+            <!-- BIENVENIDA -->
+            <div id="div_1" class="tarjet flex">
+                <h2 class="text_init">!HOLA, BIENVENIDO!</h2>
+                <img src="{% static 'img/desktop.svg' %}" style="height: 200px;" alt="welcome">
+            </div>
+            <!-- CARGAR DATOS -->
+            <div id="div_2" class="tarjet flex" style="display: none;">
+                <h2>Cargar Archivo</h2>
+                <textarea disabled id="textarea">Ningún archivo seleccionado...</textarea>
+                <div>
+                    <input type="file" name="uploadedFile" accept=".xml" id="inputfile" class="file" required>
+                    <button type="submit" class="btn_content" onclick="enviar()">Cargar</button>
+                </div>
+            </div>
+            <!-- CREDITOS (DATOS ESTUDIANTE) -->
+            <div id="div_3" class="tarjet flex" style="display: none;">
+                <div class="section flex"><img src="{% static 'img/student.svg' %}" alt="student"></div>
+                <div class="section">
+                    <h2>Estudiante:</h2>
+                    <h3>Nombre: Denny Alexander Chalí Miza</h3>
+                    <h3>Carnet: 201807154</h3>
+                </div>
+            </div>
+            <!-- MOSTRAR DATOS -->
+            <div id="div_4" class="tarjet flex" style="display: none;">
+                <h2>Consultar Datos:</h2>
+                <textarea disabled id="resultados">Ningún archivo cargado...</textarea>
+            </div>
+            <div id="div_5" class="tarjet flex" style="display: none;">
+                <h2>Prueba de mensaje:</h2>
+                <textarea disabled id="resultadosMensaje">Ningún mensaje de prueba enviado...</textarea>
+                <div><input type="file" name="uploadedFile" accept=".xml" id="inputfileMessage" class="file" required>
+                    <button type="submit" class="btn_content" onclick="enviarMensaje()">Cargar</button>
+                </div>
+            </div>
+            <div id="div_6" class="tarjet flex" style="display: none;">
+                <h3>Resultados</h3>
+                <textarea disabled id="resultados"
+                    style="height: 60%; width: 50%; border-radius: 10px; margin-bottom: 35px; resize: none"
+                    name="comentario"></textarea>
+                <button type="submit" class="btn_content" onclick="enviar()">Cargar</button>
+            </div>
+        </div>
+    </main>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>

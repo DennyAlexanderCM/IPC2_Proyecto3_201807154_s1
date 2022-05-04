@@ -1,42 +1,10 @@
-<?xml version="1.0" ?>
-<base_de_datos>
+<?xml version="1.0" ?><base_de_datos>
 	<palabras_positivas>
-		<palabra> bueno </palabra>
-		<palabra> excelente </palabra>
-		<palabra> cool </palabra>
-		<palabra> satisfecho </palabra>
-		<palabra> alegre </palabra>
 	</palabras_positivas>
 	<palabras_negativas>
-		<palabra> malo </palabra>
-		<palabra> pésimo </palabra>
-		<palabra> triste </palabra>
-		<palabra> molesto </palabra>
-		<palabra> decepcionado </palabra>
-		<palabra> enojo </palabra>
 	</palabras_negativas>
 	<empresas>
-		<empresa nombre=" USAC ">
-			<servicio nombre="inscripción">
-				<alias> inscribí </alias>
-				<alias> inscrito </alias>
-				<alias> escribire </alias>
-			</servicio>
-			<servicio nombre="asignación">
-				<alias> asignado </alias>
-				<alias> asigne </alias>
-			</servicio>
-			<servicio nombre="graduación">
-				<alias>graduarme</alias>
-				<alias>graduacion</alias>
-			</servicio>
-		</empresa>
 	</empresas>
-	<lista_mensajes>
-		<mensaje fecha="12/05/2022"> Lugar y fecha: Guatemala, 12/05/2022 15:01 Usuario:map0001@usac.eduRed social: Twitter El servicio en la USAC para inscripción fue muy bueno y me siento muy satisfecho. </mensaje>
-		<mensaje fecha="01/04/2022"> Lugar y fecha: Guatemala, 01/04/2022 15:20 Usuario: map0002@usac.eduRed social: FacebookHoy me inscribí en la USAC, no encontré parqueo e inicié molesto mi gestión, luego tuve que hacercola y me indicaron que era la cola incorrecta, esto me enojó mucho y mejor me fui. </mensaje>
-		<mensaje fecha="24/12/2019"> Lugar y fecha: Guatemala, 24/12/2019 15:43 Usuario: map0003@usac.edu Red social: WhatsApp Ya estoy inscrito en la USAC, el proceso fue muy bueno, pero al salir,mi carro tenía pinchadas las llantas, esto me preocupóy me fui decepcionado. </mensaje>
-		<mensaje fecha="01/04/2022">Lugar y fecha: Guatemala, 01/04/2022 15:43 Usuario: map0003@usac.eduRed social: WhatsAppYa me asigne a mis cursos de la USAC, el proceso fue pésimo.</mensaje>
-		<mensaje fecha="01/04/2022">Lugar y fecha: Guatemala, 01/04/2022 15:43 Usuario: map0003@usac.eduRed social: WhatsAppHoy a la USAC, para tramitar mis papeles de graduacionestube poco tiempo en la cole pero estoy alegre porqueya me voy a graduar.</mensaje>
+    <lista_mensajes>
 	</lista_mensajes>
 </base_de_datos>
