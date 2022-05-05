@@ -1,10 +1,11 @@
-<?xml version="1.0" ?><base_de_datos>
+<?xml version="1.0" ?>
+<base_de_datos>
 	<palabras_positivas>
 	</palabras_positivas>
 	<palabras_negativas>
 	</palabras_negativas>
 	<empresas>
 	</empresas>
-    <lista_mensajes>
+	<lista_mensajes>
 	</lista_mensajes>
 </base_de_datos>

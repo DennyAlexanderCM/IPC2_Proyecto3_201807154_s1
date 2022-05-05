@@ -1,6 +1,8 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from funtions import *
+import xmltodict
+import json
 
 app = Flask(__name__)
 CORS(app)
@@ -31,6 +33,14 @@ def resetData():
         mensaje = {"Mensaje":False}
         
     return jsonify(mensaje)
+
+@app.route("/dates", methods=['GET'])
+def viewDates():
+    dates = parse('dates.xml')
+    txt = Node.toxml(dates)
+    dictionary = xmltodict.parse(txt)
+    objeto = json.dumps(dictionary)
+    return objeto
 
 #INICIAR LA APP
 if __name__ == "__main__":

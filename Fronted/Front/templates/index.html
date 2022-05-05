@@ -20,11 +20,12 @@
     <button class="btn-flotante" onclick="reset()">Reset</button>
     <nav class="navbar flex">
         <div class="nav-logo flex">
-            <h1>Tecnologías Chapinas</h1>
+            <h1 style="letter-spacing: 1px;">Tecnologías Chapinas</h1>
         </div>
         <ul class="nav-menu flex">
-            <li class="nav-item"><button type="button" class="btn_ini" onclick="showDiv2()">Cargar
-                    Archivo</button></li>
+            <li class="nav-item">
+                <button type="button" class="btn_ini" onclick="showDiv2()">Cargar Archivo</button>
+            </li>
             <li class="nav-item dropdown">
                 <button type="button" class="btn_ini dropbtn">Peticiones</button>
                 <div class="dropdown-content">
@@ -46,7 +47,6 @@
         </ul>
     </nav>
     <main>
-        
         <div class="container flex">
             <!-- BIENVENIDA -->
             <div id="div_1" class="tarjet flex">
@@ -56,9 +56,14 @@
             <!-- CARGAR DATOS -->
             <div id="div_2" class="tarjet flex" style="display: none;">
                 <h2>Cargar Archivo</h2>
-                <textarea disabled id="textarea">Ningún archivo seleccionado...</textarea>
+                <div style="width: 100%; display: flex; justify-content: space-evenly;" class="contenido">
+                    <textarea class="textarea_init" disabled id="textarea">Ningún archivo seleccionado...</textarea>
+                    <textarea class="textarea_init" disabled id="resultados">Ningún archivo cargado...</textarea>
+                </div>
                 <div>
-                    <input type="file" name="uploadedFile" accept=".xml" id="inputfile" class="file" required>
+                    <input type="file" name="file" accept=".xml" id="inputfile"  class="inputfile" />
+                    <label for="inputfile">Seleccionar Archivo</label>
+                    <input type="file" name="uploadedFile" accept=".xml" id="inputfile" class="inputfile" required>
                     <button type="submit" class="btn_content" onclick="enviar()">Cargar</button>
                 </div>
             </div>
@@ -74,13 +79,15 @@
             <!-- MOSTRAR DATOS -->
             <div id="div_4" class="tarjet flex" style="display: none;">
                 <h2>Consultar Datos:</h2>
-                <textarea disabled id="resultados">Ningún archivo cargado...</textarea>
+                <textarea class="textarea" disabled id="resultados">Ningún archivo cargado...</textarea>
             </div>
             <div id="div_5" class="tarjet flex" style="display: none;">
                 <h2>Prueba de mensaje:</h2>
-                <textarea disabled id="resultadosMensaje">Ningún mensaje de prueba enviado...</textarea>
-                <div><input type="file" name="uploadedFile" accept=".xml" id="inputfileMessage" class="file" required>
-                    <button type="submit" class="btn_content" onclick="enviarMensaje()">Cargar</button>
+                <textarea class="textarea" disabled id="resultadosMensaje">Ningún mensaje de prueba enviado...</textarea>
+                <div>
+                    <input type="file" name="uploadedFile" accept=".xml" id="inputfileMessage" class="inputfile" required>
+                    <label for="inputfileMessage">Seleccionar Archivo</label>
+                    <button type="submit" class="btn_content" onclick="enviarMensaje()">ENVIAR</button>
                 </div>
             </div>
             <div id="div_6" class="tarjet flex" style="display: none;">

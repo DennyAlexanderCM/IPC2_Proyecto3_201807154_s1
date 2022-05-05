@@ -1,7 +1,9 @@
 from xml.dom.minidom import *
 from LinkedList import LinkedList, LinkedListDates
 from message import Message
+import xmltodict
 import re
+import json
 
 #EXPRESIONES REGUALRES
 buscarRed = re.compile(r'(([Ss][Oo][Cc][Ii][Aa][lL]:))\s?[a-zA-Z0-9]+')

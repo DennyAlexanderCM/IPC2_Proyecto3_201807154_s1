@@ -57,7 +57,7 @@ function showDiv6() {
     }
 }
 /*Función para leer archivos xml*/
-function readXML(xml) {
+function readXML() {
     //VARIABLES PARA LA LECTURA DEL ARCHIVO
     var text, parser, xmlDoc, pFeelings, pos, negativos;
 
